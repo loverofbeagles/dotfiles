@@ -1,0 +1,50 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@font-face {
+    font-family: conITC; !important
+    src: url("./Conduit ITC Regular.otf"); !important
+}
+* {
+  font-family conITC !important;
+}
+
+browser {
+    margin-top: -30px;
+}
+
+.tab-background {
+  border-radius: 0px !important; /* corners */
+  padding: none;
+  height: 15px;
+}
+.tabbrowser-tab[fadein]{ max-width: 100vw !important }
+#main-window[chromehidden*="toolbar"] #nav-bar {
+  visibility: collapse;
+}
+/* ROOT - VARS */
+*|*:root {
+ --tab-min-height:      15px !important; /* adjust */
+ --tab-min-width:       60px !important; /* adjust */
+}
+
+/* TABS: height */
+#tabbrowser-tabs,
+#tabbrowser-tabs > #tabbrowser-arrowscrollbox,
+.tabbrowser-tabs .tabbrowser-tab {
+  min-height: var(--tab-min-height) !important;
+  max-height: var(--tab-min-height) !important;
+  padding: none;
+  margin: none;
+}
+#nav-bar
+{
+        padding-bottom: 0px !important;
+}
+ /* Tab - Connect to window */
+
+.tab-background,.tab-content,.tab-stack {
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+} 
